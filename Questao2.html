@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title> questão 2</title>
+<style>
+   
+   div{
+
+        text-align: center;
+        width: 50%;
+        height: 50%;
+        background-color: gray;
+       
+    }
+</style>
+
+    </head>
+    <body>
+<div>
+        <h1>Teste de Fibonacci</h1>
+<button onclick="start()">click para adicionar um numero</button>
+<button onclick="confere()">click para conferir</button>
+<h2 id="resposta">O quesualtado aparece aqui</h2>
+
+</div>
+
+        <script>
+            let num1 = 0;
+            let num2 = 1;
+            let num3 = 0;
+            let controle =0 
+            let fib=[0,1]
+            
+            
+
+
+            function start(){
+                let usernum = prompt("insira o número de teste");
+                controle = usernum
+                
+                for(let cont = 0; cont<=usernum ; cont++){
+                    num3= num1 + num2;
+                    fib.push(num3);
+                    num1= num2;
+                    num2=num3;
+                    num3=0;
+                    console.log(fib[cont]);
+                }
+
+
+                
+               
+            }
+
+            function confere(){
+                console.log(controle)
+                
+                for(let i = 0; i <= fib.length ; i++   ){
+                   if(controle == fib[i]){
+                    document.getElementById("resposta").innerHTML  = " Este número pertence a sequência de Fibonacci"
+                    break
+                    
+                   }else{
+                    document.getElementById("resposta").innerHTML  = " Este número NÃO pertence a sequência de Fibonacci"
+                   }
+                }
+            }
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
