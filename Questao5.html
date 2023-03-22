@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title> questão 5</title>
+<style>
+   
+   div{
+        color: darkblue;
+        font-family: sans-serif;
+        text-align: center;
+        width: 50%;
+        height: 50%;
+        background-color:lightsteelblue
+       
+    }
+</style>
+
+    </head>
+    <body>
+<div>
+    <h1>Questão 5, invertendo string </h1>
+ <textarea style="resize: none;" id="campotexto">escreva aqui </textarea>
+<button onclick="reverter()" >Click para Inverter</button>
+
+<h2 id="resposta">texto invertido aqui</h2>
+
+</div>
+
+        <script>
+          
+          let texto1 = ""
+
+            function reverter(texto1){
+    
+                 let textorev =""
+                texto1 = document.getElementById("campotexto").value
+                
+                Array.from(texto1)
+                for(let  i  = texto1.length-1; i>=0; i--){
+                textorev += texto1[i];
+                document.getElementById("resposta").innerHTML = textorev
+
+                    }
+            }
+
+         
+
+        </script>
+    </body>
+</html>
